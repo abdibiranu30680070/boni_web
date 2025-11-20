@@ -65,15 +65,44 @@ export default function Hero() {
 
           {/* Right Hero Image */}
           <div className="relative">
-            <div className="relative h-96 lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl border-2 border-emerald-200">
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-400 to-amber-400 flex items-center justify-center animate-fadeIn">
-                <div className="text-center text-white p-8">
-                  <Sparkles className="w-28 h-28 mx-auto mb-4 opacity-90 animate-spin-slow" />
-                  <p className="text-2xl font-semibold">Handcrafted with Love</p>
-                  <p className="text-lg mt-2 opacity-90">Traditional & Modern Designs</p>
+            <div className="relative h-96 lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl border-2 border-emerald-200 group">
+              {/* Main Hero Image */}
+              <img 
+                src="https://images.unsplash.com/photo-1519457431-44ccd64a579b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                alt="Handmade crochet and cultural clothing collection"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              
+              {/* Overlay with text */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end">
+                <div className="text-center text-white p-8 w-full">
+                  <div className="flex justify-center mb-3">
+                    <Sparkles className="w-8 h-8 text-amber-300 animate-pulse" />
+                  </div>
+                  <p className="text-2xl font-bold mb-2">Handcrafted with Love</p>
+                  <p className="text-lg opacity-95">Traditional & Modern Designs</p>
                 </div>
               </div>
             </div>
+            
+            {/* Supporting product images */}
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 rounded-2xl overflow-hidden shadow-lg border-2 border-white z-20">
+              <img 
+                src="https://images.unsplash.com/photo-1594736797933-d0401ba94693?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                alt="Traditional cultural clothing"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            
+            <div className="absolute -top-6 -left-6 w-28 h-28 rounded-2xl overflow-hidden shadow-lg border-2 border-white z-20">
+              <img 
+                src="https://images.unsplash.com/photo-1583496661160-fb5886a13d77?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                alt="Handmade crochet details"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Background effects */}
             <div className="absolute -bottom-8 -right-8 w-36 h-36 bg-amber-300 rounded-full blur-3xl opacity-30 animate-pulse"></div>
             <div className="absolute -top-8 -left-8 w-36 h-36 bg-emerald-300 rounded-full blur-3xl opacity-30 animate-pulse"></div>
           </div>
